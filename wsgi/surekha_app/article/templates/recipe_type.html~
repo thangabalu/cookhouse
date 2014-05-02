@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Recipe
+
+{% endblock %}
+
+{% block content %}
+{% if articles.count > 0 %}
+{% for article in articles %}
+	
+        {% if article.recipe_type == type %}
+	<h2> <a href="/recipes/{{ type}}/{{ article.title }}/"> {{article.title}} </a> </h2>
+	     <p> {{ article.directions | truncatewords:"15" }} </p>
+	     <br>
+	{% endif %}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
