@@ -26,4 +26,4 @@ class Article(models.Model):
     recipe_type     = models.CharField(max_length=10,choices=Recipe_Choices)
 
     class Meta:
-        app_label = 'wsgi'
+        app_label = 'article'
