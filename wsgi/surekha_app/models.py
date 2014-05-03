@@ -25,5 +25,5 @@ class Article(models.Model):
     photo           = models.FileField(upload_to= get_upload_file_name)
     recipe_type     = models.CharField(max_length=10,choices=Recipe_Choices)
 
-  class Meta:
+    class Meta:
         app_label = 'surekha_app'
