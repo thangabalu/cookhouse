@@ -162,7 +162,7 @@
 	
         {% if recipe.recipe_type == type %}
         <div class = "bottom"; style ="margin-top: 50px;">
-           {% load media from staticfiles %}
+           {% load static from staticfiles %}
            <img class= "image" src="/media/{{recipe.photo}}"/><br>
 		<p><a href="/recipes/{{ type }}/{{ recipe.title }}/">{{recipe.title}}</a></p>
 	</div>
