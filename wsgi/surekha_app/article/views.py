@@ -18,7 +18,7 @@ def recipetype (request, recipetype):
 
 def showrecipe (request, recipetitle=""):
     return render_to_response('show_recipe.html',
-		{'article': Article.objects.get(title=recipetitle),
+		{'article': Article.objects.get(title=recipetitle.replace("-"," ")),
 		 'latest_recipes_three' : Article.objects.all().order_by('-pub_date')[:5],
 		 'random_recipes_three' : Article.objects.all().order_by('?')[:5]
 		})

@@ -162,7 +162,7 @@
         {% if recipe.recipe_type == type %}
         <div class = "bottom"; style ="margin-top: 50px;">
            <img class= "image" src="/media/{{recipe.photo}}"/><br>
-		<p><a href="/recipes/{{ type }}/{{ recipe.title }}/">{{recipe.title}}</a></p>
+		<p><a href="/recipes/{{ type }}/{{ recipe.title.split|join:"-"}}/">{{recipe.title}}</a></p>
 	</div>
 	{% endif %}
 

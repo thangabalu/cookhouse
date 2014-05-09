@@ -174,7 +174,7 @@
 	    <ul>
 	       <li style= "text-align: center;">Latest recipes</li><br>
 			{% for recipe in latest_recipes_three %}
-			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title }}/"> {{recipe.title}} </a> </li>
+			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-"}}/"> {{recipe.title}} </a> </li>
 		<img src="/static/{{recipe.photo}}" alt="hello", width= "140" height = "120" </img><br><br>
 			{% endfor %}
 
@@ -194,7 +194,7 @@
 	    <ul>
 	       <li style= "text-align: center;"><a href="https://www.youtube.com/">Popular recipes</a></li><br>
 			{% for recipe in random_recipes_three %}
-			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title }}/"> {{recipe.title}} </a> </li>
+			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-"}}/"> {{recipe.title}} </a> </li>
 		<img src="/static/{{recipe.photo}}" alt="hello", width= "140" height = "120" </img><br><br>
 			{% endfor %}
 
