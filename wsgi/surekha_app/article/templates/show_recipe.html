@@ -152,11 +152,14 @@
 <div class = "content">
 <br>
 <br>
-<h1> {{ article.title }} </h1>
+<h1><u> {{ article.title }} </u></h1>
 {% if article.photo %}
 <img src="/static/{{article.photo}}" alt="hello", width= "400" </img>
 {% endif %}
-
+{% if article.tips %}
+<p> {{ article.tips|linebreaks }} </p>
+<br>
+{% endif %}
 <h2> Ingredients Required</h2>
 <p> {{ article.ingredients|linebreaks }} </p>
 <br>
@@ -165,10 +168,6 @@
 <br>
 <h2> Note </h2>
 <p> {{ article.note|linebreaks }} </p>
-<br>
-<h2> Tips </h2>
-<p> {{ article.tips|linebreaks }} </p>
-<br>
 <br>
 <h2> Posted by Surekha on {{article.pub_date }} </h2>
 </div>
