@@ -13,17 +13,17 @@
 
   .bigimage {width: 1200px; height: 400px;}
   .bigimage img {height: 400px; width: 1200px;} 
-  .nav {width: 174px; float: left; height:500px; margin: auto; border: thin solid black;}
+  .nav {width: 174px; float: left; height:510px; margin: auto; border: thin solid black;}
   .navblock ul {list-style-type: none; height: 246px;}
   .navblock img{padding-left: 5px; padding-right: 5px;width:164px; height: 120px;}
   .content {color: #7D1B7E; float: left; width: 820px; height: 496px; font-size: 18; margin: auto;}
-  .right {float: right; width: 174px; height: 500px; margin: auto; border: thin solid black;}
+  .right {float: right; width: 174px; height: 510px; margin: auto; border: thin solid black;}
   .rightblock ul {list-style-type: none; height: 246px;}
   .rightblock img{padding-left: 5px; padding-right: 5px;width:164px; height: 120px;}
-  .bottom {float:left; height: 250px; width: 1200px; margin:auto; padding-left: 100px; margin-top:5px;}
-  .bottomblock {float: left; height: 200px; width: 395px;margin:auto;}
+  .bottom {float:left; width: 1200px; margin:auto; padding-top: 10px; padding-left: 100px; margin-top:5px;}
+  .bottomblock {float: left; width: 395px;margin:auto;}
   .bottomblock li { list-style: none; width: 200px;}
-  .bottomblock img {height: 80px; width: 200px; padding: 5px; margin:auto;}
+  .bottomblock img {height: 80px; width: 200px; padding: 5px;}
   .footer {clear: left; background-color: pink; height: 95px; width:1200px; margin: auto;}
   .footer img {float: left; height: 70px; width: 100px; padding: 5px;}
 
@@ -203,9 +203,6 @@
 	    </ul>
 	  </div>
 	</div>
-
-
-
         <div class = "bottom">
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
@@ -224,7 +221,7 @@
            {% load static from staticfiles %}
            <img src="{% static "img/health_benefits" %}" />
 	    <ul>
-	       <li style= "text-align: center"><a href="https://www.youtube.com/">Health Benefits</a></li>
+	       <li style= "text-align: center"><a href="#">Health Benefits</a></li>
 	       <li style= "text-align: center">Surekha will fill this</li>
 	       <li style= "text-align: center">Surekha will fill this</li>
 	       <li style= "text-align: center">Surekha will fill this</li>
@@ -237,7 +234,7 @@
            {% load static from staticfiles %}
            <img src="{% static "img/cooking_skills" %}" />
            <ul>
-	       <li style= "text-align: center"><a href="https://www.youtube.com/">Cooking skills</a></li>
+	       <li style= "text-align: center"><a href="#">Cooking skills</a></li>
 	       <li style= "text-align: center">Surekha will fill this</li>
 	       <li style= "text-align: center">Surekha will fill this</li>
 	       <li style= "text-align: center">Surekha will fill this</li>
@@ -246,8 +243,6 @@
 	    </ul>
 	  </div>
 	</div>
-
-
         <div class= "footer">
 	    <p> © 2014 Surekha's cook house Pvt. Ltd., all rights reserved</p>
 	     {% load static from staticfiles %}
