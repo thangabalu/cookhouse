@@ -13,11 +13,13 @@
 
   .bigimage {width: 1200px; height: 400px;}
   .bigimage img {height: 400px; width: 1200px;} 
-  .nav {width: 149px; float: left; height:500px; margin: auto; border: thin solid black;}
-  .navblock ul {list-style-type: none; padding-left:5px; height: 246px; margin: auto}
-  .content {color: #7D1B7E; float: left; width: 870px; height: 496px; font-size: 18; margin: auto;}
-  .right {float: right; width: 149px; height: 500px; margin: auto; border: thin solid black;}
-  .rightblock ul {list-style-type: none; padding-left: 5px; height: 246px; margin: auto;}
+  .nav {width: 174px; float: left; height:500px; margin: auto; border: thin solid black;}
+  .navblock ul {list-style-type: none; height: 246px;}
+  .navblock img{padding-left: 5px; padding-right: 5px;width:164px; height: 120px;}
+  .content {color: #7D1B7E; float: left; width: 820px; height: 496px; font-size: 18; margin: auto;}
+  .right {float: right; width: 174px; height: 500px; margin: auto; border: thin solid black;}
+  .rightblock ul {list-style-type: none; height: 246px;}
+  .rightblock img{padding-left: 5px; padding-right: 5px;width:164px; height: 120px;}
   .bottom {float:left; height: 250px; width: 1200px; margin:auto; padding-left: 100px; margin-top:5px;}
   .bottomblock {float: left; height: 200px; width: 395px;margin:auto;}
   .bottomblock li { list-style: none; width: 200px;}
@@ -174,8 +176,8 @@
 	    <ul>
 	       <li style= "text-align: center;">Latest recipes</li><br>
 			{% for recipe in latest_recipes_three %}
-			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-"}}/"> {{recipe.title}} </a> </li>
-		<img src="/static/{{recipe.photo}}" alt="hello", width= "140" height = "120" </img><br><br>
+			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
+		<img src="/static/{{recipe.photo}}" alt="hello" </img><br><br>
 			{% endfor %}
 
 
@@ -194,8 +196,8 @@
 	    <ul>
 	       <li style= "text-align: center;"><a href="https://www.youtube.com/">Popular recipes</a></li><br>
 			{% for recipe in random_recipes_three %}
-			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-"}}/"> {{recipe.title}} </a> </li>
-		<img src="/static/{{recipe.photo}}" alt="hello", width= "140" height = "120" </img><br><br>
+			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
+		<img src="/static/{{recipe.photo}}" alt="hello"</img><br><br>
 			{% endfor %}
 
 	    </ul>
@@ -220,7 +222,7 @@
 
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
-           <img src="{% static "img/health" %}" />
+           <img src="{% static "img/health_benefits" %}" />
 	    <ul>
 	       <li style= "text-align: center"><a href="https://www.youtube.com/">Health Benefits</a></li>
 	       <li style= "text-align: center">Surekha will fill this</li>
@@ -233,7 +235,7 @@
 
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
-           <img src="{% static "img/cooking" %}" />
+           <img src="{% static "img/cooking_skills" %}" />
            <ul>
 	       <li style= "text-align: center"><a href="https://www.youtube.com/">Cooking skills</a></li>
 	       <li style= "text-align: center">Surekha will fill this</li>
