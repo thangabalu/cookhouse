@@ -12,7 +12,10 @@
   .header img {float: left; height: 90px; width: 100px; padding: 5px; margin-right: 20px}
 
   .bigimage {width: 1200px; height: 400px;}
-  .bigimage img {height: 400px; width: 1200px;} 
+  .firstimage {float:left; padding-left: 25px;}
+  .secondimage {float:left;padding-left: 50px;}
+  .firstimage img  {width: 350px; height: 200px;}
+  .secondimage img {width: 600px; height: 300px;}
   .nav {width: 174px; float: left; height:510px; margin: auto; border: thin solid black;}
   .navblock ul {list-style-type: none; height: 246px;}
   .navblock img{padding-left: 5px; padding-right: 5px;width:164px; height: 120px;}
@@ -166,7 +169,13 @@
 
 	<div class= "bigimage">
 	     {% load static from staticfiles %}
-	     <img src="{% static "img/food" %}"/>	
+		<div class = "firstimage">
+		     <img src="{% static "img/bigpic_home1.jpg" %}"/>	
+		</div>
+
+		<div class = "secondimage">
+		     <img src="{% static "img/bigpic_home2.jpg" %}"/>	
+		</div>
 	</div>
 
 
