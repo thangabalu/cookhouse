@@ -214,7 +214,7 @@ Healthy cooking doesn't mean that you have to become a gourmet chef or invest in
         <div class = "right">
 	   <div class ="rightblock">
 	    <ul>
-	       <li style= "text-align: center;"><a href="https://www.youtube.com/">Popular recipes</a></li><br>
+	       <li style= "text-align: center;">Popular recipes</li><br>
 			{% for recipe in random_recipes_three %}
 			<li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
 		<img src="/static/{{recipe.photo}}" alt="hello"</img><br><br>
