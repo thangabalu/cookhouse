@@ -6,27 +6,27 @@
    a {text-decoration: none;}
    p {padding-left: 10px;}
   .maincontainer {width:1200px; margin-left:auto; margin-right: auto; border: thin solid black; }
-  .container  {width:1200px; margin: auto; height:133px; background-color: #E0B0FF}
-  .header     {background-color: #E0B0FF}
-  .header h1  {color: #FE2E9A; line-height: 100px}
-  .header img {float: left; height: 90px; width: 100px; padding: 5px; margin-right: 20px}
+  .container  {width:1200px; margin: auto; height:133px; background-color: pink}
+  .header     {background-color: pink}
+  .header h1  {color: #FE2E9A; font-size: 50px; line-height: 100px}
+  .header font  {color: #FE2E9A; font-size: 50px; line-height: 50px}
+  .header img {float: left; height: 90px; width: 100px; padding-left:250px;}
 
   .bigimage {width: 1200px; height: 400px;}
   .firstimage {float:left; padding-left: 25px;}
   .secondimage {float:left;padding-left: 50px;}
   .firstimage img  {width: 350px; height: 200px;}
   .secondimage img {width: 600px; height: 300px;}
-  .nav {width: 234px; float: left; height:510px; margin: auto; border: thin solid black;}
+  .nav {width: 234px; float: left; height:580px; margin: auto; border: thin solid black;}
   .navblock ul {list-style-type: none; height: 246px;}
-  .navblock img{padding-left: 5px; padding-right: 5px;width:224px; height: 120px;}
+  .navblock img{padding-left: 5px; padding-right: 5px;width:224px; height: 150px;}
   .content {color: #7D1B7E; float: left; width: 700px; height: 496px; font-size: 18; margin: auto;}
-  .right {float: right; width: 234px; height: 510px; margin: auto; border: thin solid black;}
+  .right {float: right; width: 234px; height: 580px; margin: auto; border: thin solid black;}
   .rightblock ul {list-style-type: none; height: 246px;}
-  .rightblock img{padding-left: 5px; padding-right: 5px;width:224px; height: 120px;}
+  .rightblock img{padding-left: 5px; padding-right: 5px;width:224px; height: 150px;}
   .bottom {float:left; width: 1200px; margin:auto; padding-top: 10px; padding-left: 100px; margin-top:5px;}
   .bottomblock {float: left; width: 395px;margin:auto;}
-  .bottomblock li { list-style: none; width: 200px;}
-  .bottomblock img {height: 80px; width: 200px; padding: 5px;}
+  .bottomblock img {height: 150px; width: 224px; padding: 5px;}
   .footer {clear: left; background-color: pink; height: 95px; width:1200px; margin: auto;}
   .footer img {float: left; height: 70px; width: 100px; padding: 5px;}
 
@@ -227,40 +227,23 @@ Healthy cooking doesn't mean that you have to become a gourmet chef or invest in
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
            <img src="{% static "img/recipes" %}" />
-	    <ul>
-	       <li style= "text-align: center"><a href="/recipes/all">Recipes</a></li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	    </ul>
+	   <b><font align="center"> Recipes</font></b>
+<p>Find many recipies from baking to broiling and from pastry to perfect rice cooking. Complex recipies are made simple and easy that even a kid can cook with perfection.</p>
 	  </div>
 
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
            <img src="{% static "img/health_benefits" %}" />
-	    <ul>
-	       <li style= "text-align: center"><a href="#">Health Benefits</a></li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	    </ul>
+	   <b><font align="center"> Health benefits</font></b>
+<p>Healthy lifestyle is what all wants without compromising their favorite food. Is it possible? Yes! Its just the matter of knowing more about your food</p>
+	    
 	  </div>
 
 	   <div class ="bottomblock">
            {% load static from staticfiles %}
            <img src="{% static "img/cooking_skills" %}" />
-           <ul>
-	       <li style= "text-align: center"><a href="#">Cooking skills</a></li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	       <li style= "text-align: center">Surekha will fill this</li>
-	    </ul>
+	   <b><font align="center">Cooking skills</font></b>
+<p>To reach the peak of perfection in cooking follow the tips shared. Your magical touch will not only transform but also create an ambience as starred hotel food, to be craved by one & all in your fly.</p>	    
 	  </div>
 	</div>
         <div class= "footer">
