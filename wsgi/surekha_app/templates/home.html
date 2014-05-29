@@ -9,11 +9,15 @@
   .container  {width:1200px; margin: auto; height:133px; background-color: pink}
   .header h1  {color: #FE2E9A; font-size: 50px; line-height: 100px}
   .header img {float: left; height: 90px; width: 100px; padding-left:250px;}
-  .bigimage {width: 1200px; height: 400px;}
-  .firstimage {float:left;border: thin solid black;}
-  .secondimage {float:left;border: thin solid black;}
-  .firstimage img  {width: 300px; height: 150px; padding-left:140px;}
-  .secondimage img {width: 710px; height: 350px;}
+  .bigimage {width: 1200px; height: 500px; margin-bottom: 30px; box-shadow: 10px 10px 5px #888888;}
+  .firstimage {float:left; height:400px; width: 400px;}
+  .secondimage {float:left; width: 570px; height: 364px; padding-left:100px}
+  .firstimage img1  {width: 300px; height: 150px;}
+  .firstimage img2  {width: 400px; height: 200px;}
+  .secondimage img {width: 570px; height: 364px;}
+  .firstimage_first {padding-left: 130px; padding-bottom:40px;}
+  .firstimage_second {padding-left: 100px; }
+
   .nav {width: 234px; float: left; height:580px; margin: auto; border: thin solid black;}
   .navblock ul {list-style-type: none; height: 246px;}
   .navblock img{padding-left: 5px; padding-right: 5px;width:224px; height: 150px;}
@@ -168,15 +172,18 @@
 	<div class= "bigimage">
 	     {% load static from staticfiles %}
 		<div class = "firstimage">
-		     <img src="{% static "img/bigpic_home1.jpg" %}"/>	
+                  <div class= "firstimage_first">
+		     <img class="img1" src="{% static "img/bigpic_home1.jpg" %}"/>	
+                  </div>
+                  <div class = "firstimage_second">
+		     <img class="img2" src="{% static "img/bigpic_home3.jpg" %}"/>
+                  </div>
 		</div>
 
 		<div class = "secondimage">
 		     <img src="{% static "img/bigpic_home2.jpg" %}"/>	
 		</div>
 	</div>
-
-
 
         <div class = "nav">
 	   <div class ="navblock">
