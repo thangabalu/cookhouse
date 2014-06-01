@@ -6,9 +6,9 @@
    a {text-decoration: none;color: #FF3288; font-weight:bold}
    p {padding-left: 10px;}
   .bigcontainer {width:100%; margin-left:auto; margin-right:auto;}
-  .container  {height:162px; border: thin solid black;}
+  .container  {height:168px; border: thin solid black;}
   .maincontainer {width:980px;margin-left:auto; margin-right: auto; background-color:white;}
-  .header {height:120px; padding-bottom:10px;}
+  .header {height:130px;}
   .header img {float: left;height: 120px; width: 100px; padding-left:250px;}
   .header h1  {color: #FE2E9A; font-size: 60px; line-height: 50px;padding-top:40px;}
   .header h2  {color: #FE2E9A; font-size: 16px;}
@@ -36,29 +36,38 @@
   .footer {clear: left; background-color: pink; height: 115px; margin: auto;}
   .footer img {float: left; height: 90px; width: 100px; padding: 5px;}
 
+.navmenu_block
+{
+        height:38px;
+	background: #F781F3; repeat-x;
+        margin:0;
+        padding:0;
+}
+
 .navmenu
 {	
         width:980px;
         margin-left:auto;
         margin-right:auto;
+        margin-top:0;
+        margin-bottom:0;
 }
 
 .navmenu ul
 {
-	margin:0;
-	padding:0;
-	line-height: 30px;
+	line-height: 36px;
 }
 
 .navmenu li
 {
-	margin:0;
 	padding:0;
         width:auto;
 	list-style:none;
 	float:left;
 	position:relative;
 	background: #F781F3;
+        height:37px;
+	border-right: thin solid black;
 }
 
 .navmenu ul li a
@@ -68,11 +77,9 @@
 	text-align:center;
 	font-family: "Arial Black", Gadget, sans-serif;
 	text-decoration:none;
-	height:30px;
 	width: 161px;
 	display:block;
 	color: #FFF;
-	border: 1px solid #FFF;
 	text-shadow: 1px 1px 1px #000;
 }
 
@@ -123,6 +130,7 @@
              <h1> Surekha's Cookhouse </h1>
 	     <h2>The House of flavors, tastes, recipes and healthy tips.</h2>
           </div>
+       <div class = "navmenu_block">
        	<div class = "navmenu">
 		<ul>
 			<li><a href="/home">Home </a>
@@ -169,6 +177,7 @@
 			</ul>
 			</li>
 		</ul>
+          </div>
   </div>
  </div>
 	
