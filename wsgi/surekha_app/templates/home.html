@@ -34,7 +34,9 @@
   .bottomblock p {color: #A9215A; font-size:16; line-height: 1.4em; text-align: justify}
   .bottomblock center {font-size:18; font-weight:bold}
   .footer {clear: left; background-color: pink; height: 115px; margin: auto;}
-  .footer img {float: left; height: 90px; width: 100px; padding: 5px;}
+  .footer p {vertical-align:middle; line-height:95px; text-align:right;}
+  .footer img {float: right; height: 100px; width: 100px;}
+
 
 .navmenu_block
 {
@@ -267,11 +269,10 @@ Healthy cooking doesn't mean that you have to become a gourmet chef or invest in
 
 </div>	
         <div class= "footer">
-	    <p> © 2014 Surekha's cook house Pvt. Ltd., all rights reserved</p>
 	     {% load static from staticfiles %}
 	     <img src="{% static "img/surekhacook" %}"/>
+	    <p> © 2014 Surekha's cook house. All rights reserved</p><br>
         </div>
-
 </div>	
 </body>
 </html>
