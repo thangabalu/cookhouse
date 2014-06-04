@@ -32,8 +32,5 @@ class Article(models.Model):
     def __unicode__(self):
     	return self.title
 
-    def __unicode__(self):
-    	return self.recipe_type
-
     class Meta:
         app_label = 'article'
