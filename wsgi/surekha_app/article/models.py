@@ -33,7 +33,7 @@ class Article(models.Model):
     	return self.title
 
     def __unicode__(self):
-    	return self.pub_date
+    	return self.recipe_type
 
     class Meta:
         app_label = 'article'
