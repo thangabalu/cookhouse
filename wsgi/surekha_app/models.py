@@ -6,7 +6,7 @@ import time
 def get_upload_file_name(instance, filename):
 	return "uploaded_files/%s_%s" % (str(time.time()).replace('.','_'), filename)
 
-# I am making the title field unique, because I will use this in the part of the url
+#  I am making the title field unique, because I will use this in the part of the url
 class Article(models.Model):
 
     Recipe_Choices = (
@@ -24,6 +24,8 @@ class Article(models.Model):
     tips            = models.TextField(blank = True)
     photo           = models.FileField(upload_to= get_upload_file_name)
     recipe_type     = models.CharField(max_length=10,choices=Recipe_Choices)
+    likes           = models.IntegerField(blank = True, null = True)
+    meta_keyword    = models.TextField(blank = True, null = True)
 
     def __unicode__(self):
     	return self.title
