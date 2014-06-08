@@ -18,7 +18,7 @@ class Article(models.Model):
     )
     title           = models.CharField(max_length=200, unique = True)
     ingredients     = models.TextField()
-    pub_date        = models.DateTimeField(auto_now=True)
+    pub_date        = models.DateTimeField()
     directions      = models.TextField()
     note            = models.TextField(blank = True)
     tips            = models.TextField(blank = True)
