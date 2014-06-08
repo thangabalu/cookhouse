@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
 from article.models import Article
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 #Order.objects.order_by('-date')[0]
@@ -27,3 +28,11 @@ def recipes_all(request):
     return render_to_response('recipes_all.html',
 				{'articles': Article.objects.all()})
 
+def like_article(request, recipetype="",recipetitle=""):
+    if recipetype and recipetitle:
+        a = Article.objects.get(title=recipetitle.replace("-"," "))
+        count = a.likes
+	count += 1
+	a.likes = count
+	a.save()
+    return HttpResponseRedirect('/recipes/%s/%s/'% (recipetype,recipetitle))
