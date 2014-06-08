@@ -10,7 +10,7 @@ from django.http import HttpResponseRedirect
 def home(request):
    return render_to_response('home.html', 
 				{'latest_recipes_one' : Article.objects.all().order_by('-pub_date')[:1],
-                              	 'random_recipes_one' : Article.objects.all().order_by('?')[:1]})
+                              	 'popular_recipes_one' : Article.objects.all().order_by('-likes')[0:1]})
 
 def recipetype (request, recipetype):
     return render_to_response('recipe_type_new.html',
