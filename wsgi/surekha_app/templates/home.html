@@ -32,8 +32,8 @@
             </div>
 	    <br><br>
 			{% for recipe in latest_recipes_one %}
-			<li style= "text-align: center;"> <a style="color:#cccc33;" href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
-		<img src="/static/{{recipe.photo}}" alt="hello" </img><br><br>
+			<li style= "text-align: center;"> <a style="color:#cccc33;" href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </li>
+		<img src="/static/{{recipe.photo}}" alt="hello" </img></a><br><br>
 			{% endfor %}
 
             <div class = "navmenu"; style="width: 220px">
@@ -44,8 +44,8 @@
 	    <br><br>
 
 			{% for recipe in popular_recipes_one %}
-			<li style= "text-align: center"> <a style="color:#cccc33;" href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
-		<img src="/static/{{recipe.photo}}" alt="hello" </img><br><br>
+			<li style= "text-align: center"> <a style="color:#cccc33;" href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </li>
+		<img src="/static/{{recipe.photo}}" alt="hello" </img></a><br><br>
 			{% endfor %}
 
 	    </ul>
