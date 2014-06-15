@@ -1,0 +1,11 @@
+*.py[co]
+*.sw[po]
+*.bak
+*.orig
+*~
+*.json
+*.db
+.project
+.pydevproject
+djangotest/static/*
+static/*
