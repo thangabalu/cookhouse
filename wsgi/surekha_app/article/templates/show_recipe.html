@@ -7,44 +7,50 @@
 
 {% block content %}
 <div class = "maincontainer">
+<div class = "content_block_show_recipe">
+   <br>
+   <br>
+   <h1><u> {{ article.title }} </u></h1>
+   <br>
+   {% if article.photo %}
+   <img src="/static/{{article.photo}}" alt="hello"</img>
+   <br><br>
+   {% endif %}
 
-<div class = "content_show_recipe">
-	<br>
-	<br>
-	<h1><u> {{ article.title }} </u></h1>
-	<br>
-	{% if article.photo %}
-	<img src="/static/{{article.photo}}" alt="hello"</img>
-	<br><br>
-	{% endif %}
-	{% if article.note %}
-	<p> {{ article.note|linebreaks }} </p>
-	<br>
-	{% endif %}
-	<h2> Ingredients Required</h2>
-	<p> {{ article.ingredients|linebreaks }} </p>
-	<br>
-	<h2> Directions </h2>
-	<p> {{ article.directions|linebreaks }} </p>
-	<br>
-	<h2> Tips </h2>
-	<p> {{ article.tips|linebreaks }} </p>
-	<br>
-            <div class = "navmenu">
-		<ul>
-			<li><a style="width:100px;" href="/recipes/{{article.recipe_type}}/{{article.title.split|join:"-"}}/like/">Like </a> </li>
-		</ul>
-            </div>
-	<div style="padding-top:5px; font-size: 17px;">
-	   +{{article.likes}}
-	</div>
-	<div style="text-align:right">
-		<span class = "posted_show_recipe"> Posted by Surekha on {{article.pub_date }} </span>
-	</div>
-	<br>
+   {% if article.note %}
+   <p> {{ article.note|linebreaks }} </p>
+   <br>
+   {% endif %}
 
+   <h2> Ingredients Required</h2>
+   <p> {{ article.ingredients|linebreaks }} </p>
+   <br>
 
-<div class = "bottom_show_recipe">
+   <h2> Directions </h2>
+   <p> {{ article.directions|linebreaks }} </p>
+   <br>
+   
+   <h2> Tips </h2>
+   <p> {{ article.tips|linebreaks }} </p>
+   <br>
+      <div class = "navmenu">
+        <ul>
+	 <li><a style="width:100px;" href="/recipes/{{article.recipe_type}}/{{article.title.split|join:"-"}}/like/">Like </a> </li>
+        </ul>
+      </div>
+      
+      <div style="padding-top:5px; font-size: 17px;">
+   	  +{{article.likes}}
+      </div>
+	
+      <div style="text-align:right">
+          <span class = "posted_show_recipe"> Posted by Surekha on {{article.pub_date }} </span>
+      </div>
+      <br>
+</div>
+
+   <div class = "navigation_show_recipe">
+
 	<div class ="bottomblock_show_recipe">
 	<ul>
   	      <li style= "text-align: center;">Latest recipes</li><br>
@@ -52,9 +58,7 @@
 	      <li style= "text-align: center"> <a href="/recipes/{{ recipe.recipe_type }}/{{ recipe.title.split|join:"-" }}/"> {{recipe.title}} </a> </li>
 	      {% endfor %}
 	</ul>
-	</div>
-
-	<div class ="bottomblock_show_recipe">
+	<br><br>
 	<ul>
 		<li style= "text-align: center;">Popular recipes</li><br>
 		{% for recipe in random_recipes_three %}
@@ -62,9 +66,12 @@
 		{% endfor %}
 
 	</ul>
-        </div>
 </div>
-</div>
+
+
+
+
+   </div>
 </div>
 {% endblock %}
 </body>
